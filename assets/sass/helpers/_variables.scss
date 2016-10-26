@@ -1,8 +1,10 @@
 /* color palette */
-$primary-dark: #363A5B;
-$primary-light: #363A5B;
+$primary-dark: rgb(41, 40, 74);
+$primary-light: rgb(56, 55, 92);
 $secondary-light: #1FBCD7;
 $secondary-dark: #5F6EDC;
+$primary-grey: #909090;
+$secondary-grey: rgb(134, 133, 156);
 
 /* functional variables */
 $page-background: $primary-dark;
@@ -11,4 +13,7 @@ $footer-color: $secondary-dark;
 /* font variables */
 $post-headline-font: "Playfair Display", serif;
 $navigation-font: "Fjalla One", sans-serif;
-$read-more-font: "Karla", sans-serif;
+$main-font: "Karla", sans-serif;
+
+/* image urls */
+$header-image: "../images/header-picture.jpg";

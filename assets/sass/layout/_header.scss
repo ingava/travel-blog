@@ -1,0 +1,76 @@
+
+.menu-items {
+  @include flex;
+  justify-content: flex-end;
+  margin: 1em 1em 0 1em;
+
+  a {
+    list-style: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 0.6em 0.5em 1em 0.5em;
+
+    &:hover {
+      color: $secondary-light;
+      }
+    }
+
+  svg {
+    margin-right: auto;
+  }
+}
+
+a.active {
+  color: $secondary-light;
+  border-bottom: 2px solid $secondary-light;
+}
+
+.header-picture {
+  height: 250px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url($header-image) no-repeat 0 70%;
+  background-size: cover;
+  color: white;
+}
+
+.fa-search {
+  color: $primary-grey;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+}
+
+.header-vertical-text {
+  float: left;
+  transform: rotate(270deg);
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 2em 0 0 0.8em;
+
+  span {
+    display: block;
+    text-align: right;
+  }
+}
+
+.blog-title {
+  text-align: center;
+
+  p {
+    margin: 0;
+    padding-top: 1.5em;
+  }
+}
+
+#publication-number {
+
+  p {
+    margin: 0 0 0 4em;
+    text-align: center;
+  }
+
+  span {
+    display: block;
+  }
+}
+

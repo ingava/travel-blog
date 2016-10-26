@@ -1,9 +1,4 @@
-@mixin flex {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-@mixin circle {
+.search-field {
   position: relative;
   background: white;
   width: 50px;

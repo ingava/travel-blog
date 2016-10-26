@@ -1,0 +1,81 @@
+.footerWrapper {
+  background-color: $secondary-dark;
+  margin-top: 3em;
+  text-align: center;
+}
+
+.subscribeText {
+  padding-top: 1.7em;
+}
+
+.lowerText {
+  padding: 1em 0 2em 0;
+}
+
+.subscribeInput {
+  border-radius: 3rem;
+  padding-left: 1em;
+  height: 2.8em;
+  width: 18em;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* how to import that from above? */
+.subscribeBtn {
+  border-radius: 3rem;
+  cursor: pointer;
+  height: 2.8em;
+  border: none;
+  background-color: rgb(255, 192, 0);
+  color: white;
+  padding: 0 1em;
+  margin-left: -3em;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.footerNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toTop {
+  @include circle;
+}
+
+.footerNav ul li {
+  display: inline-block;
+}
+
+.footerNav ul {
+  position: relative;
+  margin-right: 1.5em;
+}
+
+.footerNav ul li.toTopText {
+  position: absolute;
+  top: 0.9em;
+  left: -1em;
+}
+
+.footerNav p {
+  margin-left: 2em;
+}
+
+.copyright {
+  margin-left: 1.5em;
+}
+
+.fa-chevron-up {
+  color: $primary-grey;
+  position: absolute;
+  top: 15px;
+  left: 17px;
+  font-size: 16px;
+}
