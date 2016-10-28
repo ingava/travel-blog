@@ -51,11 +51,6 @@ a.pageNumber {
   letter-spacing: 0;
 }
 
-.prev, .next {
-  text-decoration: none;
-  color: white;
-}
-
 .subscribeText {
   font-size: 2rem;
   color: white;
@@ -81,4 +76,9 @@ a.pageNumber {
 .copyright {
   color: $secondary-grey;
   font-size: 0.7rem;
+}
+
+.prev a, .next a {
+  text-decoration: none;
+  color: white;
 }
