@@ -38,6 +38,7 @@ a.active {
   position: absolute;
   top: 17px;
   left: 18px;
+  cursor: pointer;
 }
 
 .header-vertical-text {
@@ -74,4 +75,25 @@ a.active {
     display: block;
   }
 }
+
+.search-field .search-input {
+  width: 70%;
+  border: none;
+  position: absolute;
+  top: 17px;
+  left: 45px;
+  color: $primary-grey;
+  outline: none;
+  display: none;
+}
+
+.search-field.expanded {
+  width: 200px;
+}
+
+.search-field.expanded .search-input {
+  display: block;
+}
+
+
 
