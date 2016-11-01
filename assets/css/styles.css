@@ -537,6 +537,9 @@ a.pageNumber {
 .copyright {
   margin-left: 1.5em; }
 
+.toTop {
+  cursor: pointer; }
+
 .fa-chevron-up {
   color: #909090;
   position: absolute;
@@ -599,6 +602,9 @@ a.active {
   text-align: center; }
 #publication-number span {
   display: block; }
+
+.search-field {
+  cursor: pointer; }
 
 .search-field .search-input {
   width: 70%;
