@@ -14,17 +14,14 @@ body {
 }
 
 .postWrapper {
+  max-width: 400px;
+  background-color: $primary-light;
   margin: 1em;
 }
 
 .postImage {
   width: 400px;
   height: 400px;
-}
-
-.postText {
-  max-width: 400px;
-  background-color: $primary-light;
 }
 
 .postDate, .postTitle {
@@ -44,7 +41,7 @@ a.readMore {
 
 .postTitle {
   line-height: 1.5em;
-  margin: 0.7em 2em;
+  margin: 0.7em 1em;
 }
 
 .postNav {
