@@ -14,6 +14,7 @@ body {
 }
 
 .postWrapper {
+  position: relative;
   max-width: 400px;
   background-color: $primary-light;
   margin: 1em;
@@ -22,6 +23,28 @@ body {
 .postImage {
   width: 400px;
   height: 400px;
+}
+
+.like-circle {
+  @include circle;
+  position: absolute;
+  top: 1em;
+  left: 20.8em;
+  cursor: pointer;
+}
+
+.fa-heart-o {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  color: $primary-grey;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  color: rgb(205, 10, 60);
 }
 
 .postDate, .postTitle {
@@ -132,3 +155,76 @@ div.arrow-right.icon {
   border-left: 1px solid $secondary-grey;
 }
 
+/* Extra Small Devices, Phones */
+
+@media (max-width: 480px) {
+
+  .postWrapper {
+    max-width: 360px;
+  }
+
+  .postImage {
+    width: 360px;
+    height: 360px;
+  }
+
+  .like-circle {
+    left: 18.4em;
+  }
+
+  .pageNumber {
+    display: none;
+  }
+
+  .postNav {
+    width: 100%;
+  }
+
+  div.arrow-right.icon {
+    margin: 1.5em 6em;
+  }
+
+  .next {
+    margin-left: 0;
+    padding-right: 3em;
+  }
+
+  div.arrow-left.icon {
+    margin-left: 1em;
+  }
+
+  .prev {
+    padding-left: 0.5em;
+  }
+
+  .subscribeText {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .subscribeBtn {
+    margin: 1em;
+  }
+}
+
+/* Custom, iPhone Retina */
+
+@media (max-width: 320px) {
+
+  .postWrapper {
+    max-width: 320px;
+  }
+
+  .postImage {
+    width: 320px;
+    height: 320px;
+  }
+
+  .like-circle {
+    left: 16em;
+  }
+
+  .subscribeText {
+    font-size: 1.7rem;
+  }
+}

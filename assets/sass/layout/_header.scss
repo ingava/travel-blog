@@ -5,7 +5,6 @@
   margin: 1em 1em 0 1em;
 
   a {
-    list-style: none;
     text-transform: uppercase;
     text-decoration: none;
     color: white;
@@ -16,7 +15,7 @@
       }
     }
 
-  svg {
+  .logo {
     margin-right: auto;
   }
 }
@@ -99,5 +98,40 @@ a.active {
   display: block;
 }
 
+/* Extra Small Devices, Phones */
+
+@media (max-width: 480px) {
+
+  .hidden {
+    display: none;
+  }
+
+  .logo {
+    margin-bottom: 0.9em;
+  }
+
+  .menu-items {
+    display: block;
+
+    a {
+      text-align: center;
+    }
+    .search-field {
+      margin: 0 auto 1em auto;
+    }
+  }
+
+  nav a {
+    display: block;
+  }
+
+  .header-vertical-text {
+    display: none;
+  }
+
+  #publication-number p {
+    margin: 0;
+  }
+}
 
 
