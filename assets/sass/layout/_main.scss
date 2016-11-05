@@ -18,6 +18,10 @@ body {
   max-width: 400px;
   background-color: $primary-light;
   margin: 1em;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .postImage {
