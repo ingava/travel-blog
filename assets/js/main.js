@@ -29,15 +29,11 @@ $(document).ready(function () {
     $("#subscribeBtn").click(function (e) {
         var email = $("#subscribeInput").val();
 
-        if ($.trim(email).length == 0) {
-            $("#subscribeInput").append("<p>Please enter your email address</p>");
-            e.preventDefault();
-        }
-
         if (validateEmail (email)) {
-            alert("Thank you for subscribing");
+            alert("Thank you for subscribing to our newsletter!");
         } else {
-            $("#subscribeInput").append("<p>Please enter a valid email address</p>");
+            $(".warningMessage").remove();
+            $("#subscribeBtn").after("<p class='warningMessage'>Please enter a valid email address</p>");
             e.preventDefault();
         }
     });
@@ -51,5 +47,4 @@ $(document).ready(function () {
             return false;
         }
     }
-
 });
