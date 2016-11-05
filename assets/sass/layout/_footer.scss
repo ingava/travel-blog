@@ -9,7 +9,17 @@
 }
 
 .lowerText {
-  padding: 1em 0 2em 0;
+  padding: 1em 0 1.5em 0;
+  margin: 2.5em 0 0 0;
+}
+
+#subscribeForm {
+  position: relative;
+}
+
+.warningMessage {
+  position: absolute;
+  left: 37em;
 }
 
 .subscribeInput {
@@ -38,10 +48,6 @@
   &:focus {
     outline: none;
   }
-}
-
-.warningMessage {
-  color: rgb(85, 0, 0);
 }
 
 .footerNav {
@@ -83,8 +89,8 @@
 .fa-chevron-up {
   color: $primary-grey;
   position: absolute;
-  top: 15px;
-  left: 17px;
+  top: 0.95em;
+  left: 1em;
   font-size: 16px;
 }
 

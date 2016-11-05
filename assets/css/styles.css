@@ -475,6 +475,9 @@ a.pageNumber {
   text-decoration: none;
   color: white; }
 
+.warningMessage {
+  color: #550000; }
+
 .footerWrapper {
   background-color: #5F6EDC;
   margin-top: 3em;
@@ -484,7 +487,15 @@ a.pageNumber {
   padding-top: 1.7em; }
 
 .lowerText {
-  padding: 1em 0 2em 0; }
+  padding: 1em 0 1.5em 0;
+  margin: 2.5em 0 0 0; }
+
+#subscribeForm {
+  position: relative; }
+
+.warningMessage {
+  position: absolute;
+  left: 37em; }
 
 .subscribeInput {
   border-radius: 3rem;
@@ -507,9 +518,6 @@ a.pageNumber {
   margin-left: -3em; }
   .subscribeBtn:focus {
     outline: none; }
-
-.warningMessage {
-  color: #550000; }
 
 .footerNav {
   display: flex;
@@ -547,8 +555,8 @@ a.pageNumber {
 .fa-chevron-up {
   color: #909090;
   position: absolute;
-  top: 15px;
-  left: 17px;
+  top: 0.95em;
+  left: 1em;
   font-size: 16px; }
 
 /* Extra Small Devices, Phones */
@@ -670,6 +678,8 @@ body {
   max-width: 400px;
   background-color: #38375c;
   margin: 1em; }
+  .postWrapper a {
+    text-decoration: none; }
 
 .postImage {
   width: 400px;
