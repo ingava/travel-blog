@@ -25,20 +25,31 @@ $(document).ready(function () {
     });
 
     // form validation
-    
-    function validateEmail(form_id, email) {
 
-        var reg = /^([A-Za-z0-9_\-\.]){1,}\@([A-Za-z0-9_\-\.]){1,}\.([A-Za-z]{2,4})$/;
-        var emailAddress = document.forms[form_id].elements[email].value;
+    $("#subscribeBtn").click(function (e) {
+        var email = $("#subscribeInput").val();
 
-        if (reg.test(emailAddress) == false) {
-            alert("Invalid Email Address");
+        if ($.trim(email).length == 0) {
+            $("#subscribeInput").append("<p>Please enter your email address</p>");
+            e.preventDefault();
+        }
+
+        if (validateEmail (email)) {
+            alert("Thank you for subscribing");
+        } else {
+            $("#subscribeInput").append("<p>Please enter a valid email address</p>");
+            e.preventDefault();
+        }
+    });
+
+    function validateEmail(email) {
+        var reg = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+
+        if (reg.test(email)) {
+            return true;
+        } else {
             return false;
         }
     }
 
-
-    $("#subscribeForm").submit(function () {
-        validateEmail("#subscribeForm", );
-    });
 });
