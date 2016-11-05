@@ -11,22 +11,36 @@ $(document).ready(function () {
         $(".search-field").addClass("expanded");
     });
 
+    // like functionality
+
+    $(".like-circle").on("click", function () {
+        var $heart = $(".fa", this);
+
+        if ($heart.hasClass("fa-heart")) {
+            $heart.removeClass('fa-heart');
+            $heart.addClass('fa-heart-o');
+        } else {
+            $heart.removeClass('fa-heart-o');
+            $heart.addClass('fa-heart');
+        }
+    });
+
     // to top navigation
 
-    $(".toTop").click(function () {
+    $(".toTop").on("click", function () {
         $("body").animate({ scrollTop: 0 }, "slow");
     });
 
     // menu for mobile devices
     // when deployed the event would be changed to touch
 
-    $(".logo").click(function () {
+    $(".logo").on("click", function () {
        $(".menu-item").toggleClass("hidden");
     });
 
     // form validation
 
-    $("#subscribeBtn").click(function (e) {
+    $("#subscribeBtn").on("click", function (e) {
         var email = $("#subscribeInput").val();
 
         if (validateEmail (email)) {
