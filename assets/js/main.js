@@ -39,6 +39,7 @@ $(document).ready(function () {
 
         if (validateEmail (email)) {
             alert("Thank you for subscribing to our newsletter!");
+            $("#subscribeInput").val("");
         } else {
             $(".warningMessage").remove();
             $("#subscribeBtn").after("<p class='warningMessage'>Please enter a valid email address</p>");
