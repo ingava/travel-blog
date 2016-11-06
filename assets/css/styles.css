@@ -1,5 +1,4 @@
 /* color palette */
-/* functional variables */
 /* font variables */
 /* image urls */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -435,7 +434,7 @@ template {
   font-size: 1.5rem; }
 
 .readMore {
-  color: #1FBCD7;
+  color: #1fbcd7;
   text-decoration: none; }
 
 .arrow {
@@ -456,13 +455,7 @@ a.pageNumber {
 .lowerText {
   color: #b0b1ef; }
 
-.footerNav ul li {
-  color: white;
-  text-transform: uppercase;
-  font-size: 1.2rem; }
-
-/* how to include above */
-.footerNav p {
+.footerNav ul li, .footerNav p {
   color: white;
   text-transform: uppercase;
   font-size: 1.2rem; }
@@ -479,16 +472,12 @@ a.pageNumber {
   color: #550000; }
 
 .footerWrapper {
-  background-color: #5F6EDC;
+  background-color: #5f6edc;
   margin-top: 3em;
   text-align: center; }
 
 .subscribeText {
   padding-top: 1.7em; }
-
-.lowerText {
-  padding: 1em 0 1.5em 0;
-  margin: 2.5em 0 0 0; }
 
 #subscribeForm {
   position: relative; }
@@ -497,31 +486,46 @@ a.pageNumber {
   position: absolute;
   left: 37em; }
 
-.subscribeInput {
+.subscribeInput, .subscribeBtn {
   border-radius: 3rem;
-  padding-left: 1em;
   height: 2.8em;
-  width: 18em;
   border: none; }
-  .subscribeInput:focus {
+  .subscribeInput:focus, .subscribeBtn:focus {
     outline: none; }
 
-/* how to import that from above? */
+.subscribeInput {
+  padding-left: 1em;
+  width: 18em; }
+
 .subscribeBtn {
-  border-radius: 3rem;
   cursor: pointer;
-  height: 2.8em;
-  border: none;
   background-color: #ffc000;
   color: white;
   padding: 0 1em;
   margin-left: -3em; }
-  .subscribeBtn:focus {
-    outline: none; }
+
+.lowerText {
+  padding: 1em 0 1.5em 0;
+  margin: 2.5em 0 0 0; }
 
 .footerNav {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between; }
+  .footerNav p {
+    margin: 1em 0 0em 2em; }
+
+.footerNav ul {
+  position: relative;
+  margin: 1em 1.5em 0 0; }
+
+.footerNav ul li {
+  display: inline-block; }
+
+.footerNav ul li.toTopText {
+  position: absolute;
+  top: 0.9em;
+  left: -1em; }
 
 .toTop {
   position: relative;
@@ -529,28 +533,11 @@ a.pageNumber {
   border: solid #86859c 1px;
   width: 50px;
   height: 50px;
-  border-radius: 25px; }
-
-.footerNav ul li {
-  display: inline-block; }
-
-.footerNav ul {
-  position: relative;
-  margin: 1em 1.5em 0 0; }
-
-.footerNav ul li.toTopText {
-  position: absolute;
-  top: 0.9em;
-  left: -1em; }
-
-.footerNav p {
-  margin: 1em 0 0em 2em; }
+  border-radius: 25px;
+  cursor: pointer; }
 
 .copyright {
   margin-left: 1.5em; }
-
-.toTop {
-  cursor: pointer; }
 
 .fa-chevron-up {
   color: #909090;
@@ -559,10 +546,31 @@ a.pageNumber {
   left: 1em;
   font-size: 16px; }
 
+/* Tablets, iPads */
+@media (max-width: 768px) {
+  .warningMessage {
+    left: 17em; } }
 /* Extra Small Devices, Phones */
 @media (max-width: 480px) {
   .footerWrapper {
-    margin-top: 0; } }
+    margin-top: 0; }
+
+  .subscribeText {
+    padding: 0.5em;
+    margin-bottom: 0.5em; }
+
+  .subscribeBtn {
+    margin: 1em; }
+
+  .warningMessage {
+    left: 4em; } }
+/* Custom, iPhone Retina */
+@media (max-width: 320px) {
+  .subscribeText {
+    font-size: 1.7rem; }
+
+  .warningMessage {
+    left: 2.5em; } }
 .menu-items {
   display: flex;
   flex-flow: row wrap;
@@ -574,26 +582,53 @@ a.pageNumber {
     color: white;
     padding: 0.6em 0.5em 1em 0.5em; }
     .menu-items a:hover {
-      color: #1FBCD7; }
+      color: #1fbcd7; }
   .menu-items .logo {
     margin-right: auto; }
 
 a.active {
-  color: #1FBCD7;
-  border-bottom: 2px solid #1FBCD7; }
+  color: #1fbcd7;
+  border-bottom: 2px solid #1fbcd7; }
+
+.search-field {
+  position: relative;
+  background: white;
+  border: solid #86859c 1px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer; }
+
+.search-field .search-input {
+  width: 70%;
+  border: none;
+  position: absolute;
+  top: 17px;
+  left: 45px;
+  color: #909090;
+  outline: none;
+  display: none; }
+
+.search-field.expanded {
+  width: 200px; }
+
+.search-field.expanded .search-input {
+  display: block; }
+
+.fa-search, .fa-heart-o, .fa-heart {
+  position: absolute;
+  top: 16px;
+  left: 16px; }
+
+.fa-search {
+  color: #909090;
+  cursor: pointer; }
 
 .header-picture {
   height: 250px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/header-picture.jpg") no-repeat 0 70%;
   background-size: cover;
   color: white; }
-
-.fa-search {
-  color: #909090;
-  position: absolute;
-  top: 17px;
-  left: 18px;
-  cursor: pointer; }
 
 .header-vertical-text {
   float: left;
@@ -616,25 +651,6 @@ a.active {
   margin: 0 0 0 4em;
   text-align: center; }
 #publication-number span {
-  display: block; }
-
-.search-field {
-  cursor: pointer; }
-
-.search-field .search-input {
-  width: 70%;
-  border: none;
-  position: absolute;
-  top: 17px;
-  left: 45px;
-  color: #909090;
-  outline: none;
-  display: none; }
-
-.search-field.expanded {
-  width: 200px; }
-
-.search-field.expanded .search-input {
   display: block; }
 
 /* Extra Small Devices, Phones */
@@ -692,21 +708,15 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 25px;
+  cursor: pointer;
   position: absolute;
   top: 1em;
-  left: 20.8em;
-  cursor: pointer; }
+  left: 20.8em; }
 
 .fa-heart-o {
-  position: absolute;
-  top: 1em;
-  left: 1em;
   color: #909090; }
 
 .fa-heart {
-  position: absolute;
-  top: 1em;
-  left: 1em;
   color: #cd0a3c; }
 
 .postDate, .postTitle {
@@ -737,11 +747,11 @@ a.readMore {
 
 a.pageNumber {
   margin-right: 0.5em;
-  padding: 0.7em 1em 0.7em 1em;
-  border-radius: 5em; }
+  padding: 0.7em 1em 0.7em 1em; }
 
 .highlight {
-  background-color: #1FBCD7;
+  border-radius: 5em;
+  background-color: #1fbcd7;
   color: white !important; }
 
 .arrow-left.icon {
@@ -829,14 +839,7 @@ div.arrow-right.icon {
     margin-left: 1em; }
 
   .prev {
-    padding-left: 0.5em; }
-
-  .subscribeText {
-    padding: 0.5em;
-    margin-bottom: 0.5em; }
-
-  .subscribeBtn {
-    margin: 1em; } }
+    padding-left: 0.5em; } }
 /* Custom, iPhone Retina */
 @media (max-width: 320px) {
   .postWrapper {
@@ -847,15 +850,6 @@ div.arrow-right.icon {
     height: 320px; }
 
   .like-circle {
-    left: 16em; }
-
-  .subscribeText {
-    font-size: 1.7rem; } }
-.search-field {
-  position: relative;
-  background: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px; }
+    left: 16em; } }
 
 /*# sourceMappingURL=styles.css.map */

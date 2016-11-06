@@ -34,20 +34,15 @@ body {
   position: absolute;
   top: 1em;
   left: 20.8em;
-  cursor: pointer;
 }
 
 .fa-heart-o {
-  position: absolute;
-  top: 1em;
-  left: 1em;
+  @extend %iconPosition;
   color: $primary-grey;
 }
 
 .fa-heart {
-  position: absolute;
-  top: 1em;
-  left: 1em;
+  @extend %iconPosition;
   color: rgb(205, 10, 60);
 }
 
@@ -87,10 +82,10 @@ a.readMore {
 a.pageNumber {
   margin-right: 0.5em;
   padding: 0.7em 1em 0.7em 1em;
-  border-radius: 5em;
 }
 
 .highlight {
+  border-radius: 5em;
   background-color: $secondary-light;
   color: white !important;
 }
@@ -200,15 +195,6 @@ div.arrow-right.icon {
   .prev {
     padding-left: 0.5em;
   }
-
-  .subscribeText {
-    padding: 0.5em;
-    margin-bottom: 0.5em;
-  }
-
-  .subscribeBtn {
-    margin: 1em;
-  }
 }
 
 /* Custom, iPhone Retina */
@@ -226,9 +212,5 @@ div.arrow-right.icon {
 
   .like-circle {
     left: 16em;
-  }
-
-  .subscribeText {
-    font-size: 1.7rem;
   }
 }

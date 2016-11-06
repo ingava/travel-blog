@@ -25,19 +25,46 @@ a.active {
   border-bottom: 2px solid $secondary-light;
 }
 
+.search-field {
+  @include circle;
+}
+
+.search-field .search-input {
+  width: 70%;
+  border: none;
+  position: absolute;
+  top: 17px;
+  left: 45px;
+  color: $primary-grey;
+  outline: none;
+  display: none;
+}
+
+.search-field.expanded {
+  width: 200px;
+}
+
+.search-field.expanded .search-input {
+  display: block;
+}
+
+%iconPosition {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.fa-search {
+  @extend %iconPosition;
+  color: $primary-grey;
+  cursor: pointer;
+}
+
 .header-picture {
   height: 250px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url($header-image) no-repeat 0 70%;
   background-size: cover;
   color: white;
-}
-
-.fa-search {
-  color: $primary-grey;
-  position: absolute;
-  top: 17px;
-  left: 18px;
-  cursor: pointer;
 }
 
 .header-vertical-text {
@@ -64,7 +91,6 @@ a.active {
 }
 
 #publication-number {
-
   p {
     margin: 0 0 0 4em;
     text-align: center;
@@ -73,29 +99,6 @@ a.active {
   span {
     display: block;
   }
-}
-
-.search-field {
-  cursor: pointer;
-}
-
-.search-field .search-input {
-  width: 70%;
-  border: none;
-  position: absolute;
-  top: 17px;
-  left: 45px;
-  color: $primary-grey;
-  outline: none;
-  display: none;
-}
-
-.search-field.expanded {
-  width: 200px;
-}
-
-.search-field.expanded .search-input {
-  display: block;
 }
 
 /* Extra Small Devices, Phones */

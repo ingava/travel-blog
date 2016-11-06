@@ -60,17 +60,13 @@ a.pageNumber {
   color: rgb(176, 177, 239);
 }
 
-.footerNav ul li {
+%navText {
   color: white;
   text-transform: uppercase;
   font-size: 1.2rem;
 }
-
-/* how to include above */
-.footerNav p {
-  color: white;
-  text-transform: uppercase;
-  font-size: 1.2rem;
+.footerNav ul li, .footerNav p {
+  @extend %navText;
 }
 
 .copyright {

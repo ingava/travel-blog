@@ -8,11 +8,6 @@
   padding-top: 1.7em;
 }
 
-.lowerText {
-  padding: 1em 0 1.5em 0;
-  margin: 2.5em 0 0 0;
-}
-
 #subscribeForm {
   position: relative;
 }
@@ -22,11 +17,9 @@
   left: 37em;
 }
 
-.subscribeInput {
+%input {
   border-radius: 3rem;
-  padding-left: 1em;
   height: 2.8em;
-  width: 18em;
   border: none;
 
   &:focus {
@@ -34,38 +27,42 @@
   }
 }
 
-/* how to import that from above? */
+.subscribeInput {
+  @extend %input;
+  padding-left: 1em;
+  width: 18em;
+}
+
 .subscribeBtn {
-  border-radius: 3rem;
+  @extend %input;
   cursor: pointer;
-  height: 2.8em;
-  border: none;
   background-color: rgb(255, 192, 0);
   color: white;
   padding: 0 1em;
   margin-left: -3em;
+}
 
-  &:focus {
-    outline: none;
-  }
+.lowerText {
+  padding: 1em 0 1.5em 0;
+  margin: 2.5em 0 0 0;
 }
 
 .footerNav {
-  display: flex;
+  @include flex;
   justify-content: space-between;
-}
 
-.toTop {
-  @include circle;
-}
-
-.footerNav ul li {
-  display: inline-block;
+  p {
+    margin: 1em 0 0em 2em;
+  }
 }
 
 .footerNav ul {
   position: relative;
   margin: 1em 1.5em 0 0;
+}
+
+.footerNav ul li {
+  display: inline-block;
 }
 
 .footerNav ul li.toTopText {
@@ -74,16 +71,12 @@
   left: -1em;
 }
 
-.footerNav p {
-  margin: 1em 0 0em 2em;
+.toTop {
+  @include circle;
 }
 
 .copyright {
   margin-left: 1.5em;
-}
-
-.toTop {
-  cursor: pointer;
 }
 
 .fa-chevron-up {
@@ -94,12 +87,46 @@
   font-size: 16px;
 }
 
-/* Extra Small Devices, Phones */
+/* Tablets, iPads */
 
-@media (max-width: 480px) {
-  .footerWrapper {
-    margin-top: 0;
+@media (max-width: 768px) {
+  .warningMessage {
+    left: 17em;
   }
 }
 
+/* Extra Small Devices, Phones */
+
+@media (max-width: 480px) {
+
+  .footerWrapper {
+    margin-top: 0;
+  }
+
+  .subscribeText {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .subscribeBtn {
+    margin: 1em;
+  }
+
+  .warningMessage {
+    left: 4em;
+  }
+}
+
+/* Custom, iPhone Retina */
+
+@media (max-width: 320px) {
+
+  .subscribeText {
+    font-size: 1.7rem;
+  }
+
+  .warningMessage {
+    left: 2.5em;
+  }
+}
 
